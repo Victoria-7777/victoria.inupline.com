@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
   <head> <!-- Прихована зона сайту, для браузерів і роботів -->
-    <title>Victoria</title> <!-- Заголовок сторінки видно в назві закладки -->
+    <title>Victoria web</title> <!-- Заголовок сторінки видно в назві закладки -->
     <meta name="application-name" content="InUpLine Service" /> <!-- Інформація для пошукових сервісів, application-назва сервісу або програми якщо сайт створенно для того-->
     <meta name="description" content="Сайт візитка про мене victoria" /> <!-- Інформація для пошукових сервісів, description-Опис сайту або програми -->
     <meta name="keywords" content="victoria.inupline.com, gatos, @Victoria_B251, Victoria minecraft, Victoria.inuple@gmail.com" /> <!-- Інформація для пошукових сервісів, keywords-ключові слова які асоціюються із сайтом або програмою -->
