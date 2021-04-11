@@ -1,0 +1,430 @@
+/*
+Author: VICTORIA
+Version: 0.01
+*/
+
+/*----------------------------------------------------------------
+  [Table of contents]
+  1. root
+  2. body
+  3. fonImg
+  4. logo
+  5. logoImg
+  6. logotxt
+  7. vmenu
+  8. vmenu_fon
+  9. vmenu_panel_0
+  10. vmenu_panel_1
+-----------------------------------------------------------------*/
+
+/*----------------------------------------------------------------
+1. MenuBar
+-----------------------------------------------------------------*/
+
+/*----------------------------------------------------------------
+1. ELEMENTOS UI FORMS  /////                 td.style.backgroundColor = "hsl(" + angle + ", " + i*100/slcells + "%, " + j*100/slcells + "%)";
+-----------------------------------------------------------------*/
+  
+:root {
+  --column-bg: #303e4d; /* меню */ 
+  --borders-bg: #424952; /* меню обведення */ 
+  --menu-bg-hover: #2c3849; /* меню виділення (наведення мишкою)  */ 
+  --active-item: #6698c8; /* меню виділений елемент */ 
+  --active-item-text: #ffffff; /* меню колір виділеного тексту */ 
+  --hover-item: #4a5664; /* наведений елемент */ 
+  --text-color: #ffffff; /* текст нормальний */ 
+  --fon-01: #ffffff; /* Фон 01 */ 
+  --fon-02: #c7c7c7; /* Фон 02 */ 
+  --li-text-color: #ffffff; /* список текст */ 
+  --li-mas-color: #22fc51; /* список значок + */ 
+  --li-min-color: #fc6722; /* список значок - */ 
+  --coment-text-color: #c7c7c7; /* Коментарій */ 
+  --active-presence: #94e864; /* punto lista */ 
+  --mention-badge: #78af8f; /* menu */ 
+  --btn-col: #fcb322; /* buttons */ 
+  --btn-sel: #fcd079; /* buttons */ 
+  --btn-sdw: #b37f18; /* buttons */ 
+  --menu-max: 325px; /* menu */ 
+  --fonts-zoom: 50%; /* menu */ 
+  --trans-opacity: 0.98; /* глобальний індекс прозорості */  
+
+  --fon-menu:  #191919; /* fon menu */ 
+
+  --trans-gcolorn: 0.65; /* opacity contact group norm*/ 
+  --trans-gcolorh: 0.90; /* opacity contact group hover */
+
+  --cgroup-color-001: #ff0000; /* buttons */ 
+  --cgroup-color-002: #ff5100; /* buttons */ 
+  --cgroup-color-003: #ffa600; /* buttons */ 
+  --cgroup-color-004: #e5ff00; /* buttons */ 
+  --cgroup-color-005: #48ff00; /* buttons */ 
+  --cgroup-color-006: #00ff4c; /* buttons */ 
+  --cgroup-color-007: #00d9ff; /* buttons */ 
+  --cgroup-color-008: #008cff; /* buttons */ 
+  --cgroup-color-009: #003cff; /* buttons */ 
+  --cgroup-color-010: #7700ff; /* buttons */ 
+  --cgroup-color-011: #f700ff; /* buttons */ 
+  --cgroup-color-012: #cf2020; /* buttons */ 
+  --cgroup-color-013: #cf9220; /* buttons */ 
+  --cgroup-color-014: #6fcf20; /* buttons */
+  --cgroup-color-015: #ffffff; /* buttons */
+  --cgroup-color-016: #c7c7c7; /* buttons */
+  --cgroup-color-017: #303e4d; /* buttons */
+  --cgroup-color-018: #fcb322; /* buttons */
+  --cgroup-color-019: #464646; /* buttons */
+  --cgroup-color-020: #141414; /* buttons */
+
+  --listuserold-max: 105;
+}
+
+body { /* Стиль тіла*/ 
+  background-color: var(--fon-menu); /* фоновий колір */
+  
+} 
+
+.fonImg { /* фонова картинка */ 
+  position: static;
+  background-image: url('/img/fon001.jpg'); /* фоновий файл */
+  background-size: cover; /* розміщення і розмір */
+  background-position: center; /* позиція */
+  background-attachment: fixed; /* без прокручування */
+} 
+
+.logo {
+  position: absolute; /* позиція відносно вікна */
+  top: 33%; /* позиція зверху */
+  left: 10%; /* позиція зліва */
+} 
+
+.logoImg {
+  width: 100%; /* ширина може бути в кількох значеннях px i % */
+  height: auto; /* висота може бути в кількох значеннях px i % */
+} 
+
+.logotxt {
+  font-family: 'Courier New', Courier, monospace; /* шрифт */
+  font-size: 45px; /* розмір шрифту */ 
+  margin: 10px; /* відступ по контуру з середини */
+  padding: 30px; /* відступ по контуру ззовні  */
+  color: var(--btn-col,#FCB322); /* колір тексту*/
+} 
+
+.vmenu {  /* Область меню */
+  position: fixed; /* позиція відносно вікна */
+  width: 100%; /* ширина може бути в кількох значеннях px i % */
+  height: 64px; /* висота може бути в кількох значеннях px i % */
+  top: 0px; /* позиція зверху */
+  left: 0px; /* позиція зліва */
+}
+
+/* Коли навести на параметр появиться підказка */
+
+.vmenu_fon { /* Фоновий прямокутник для обасті меню з прозорістю */
+  position: absolute; /* позиція відносно вікна */
+  width: 100%; /* ширина може бути в кількох значеннях px i % */
+  height: 64px; /* висота може бути в кількох значеннях px i % */
+  background-color: var(--fon-menu); /* фоновий колір */
+  opacity: 0.9; /* прозорість */
+  top: 0px; /* позиція зверху */
+  left: 0px; /* позиція зліва */
+  /*border: var(--li-mas-color) solid 1px; /* рамка ( колір, тип лінії , товщина лінії)*/
+}
+
+.vmenu_panel_0 {
+  position: relative; /* позиція відносно вікна */
+  opacity: 1; /* прозорість */
+  top: 0px; /* позиція зверху */
+  left: 0px; /* позиція зліва */
+  width: 350px; /* ширина може бути в кількох значеннях px i % */
+  height: 60px; /* висота може бути в кількох значеннях px i % */
+  font-family: 'Lucida Handwriting', Courier, Cursive; /* шрифт */
+  font-size: 40px; /* розмір шрифту */ 
+  margin: 5px; /* відступ по контуру з середини */
+  padding: 5px; /* відступ по контуру ззовні  */
+  color: white; /* колір тексту*/
+  /*border: var(--li-mas-color) solid 1px;*/
+} 
+
+.vmenu_panel_1 {
+  position: absolute; /* позиція відносно вікна */
+  opacity: 1; /* прозорість */
+  top: 0px;  /* позиція зверху */
+  right: 0px; /* позиція справа */
+  width: 360px; /* ширина може бути в кількох значеннях px i % */
+  height: 64px; /* висота може бути в кількох значеннях px i % */
+} 
+
+.ab_capt { /* About */
+  position: absolute; /* позиція відносно вікна */
+  width: auto; /* ширина може бути в кількох значеннях px i % */
+  height: auto; /* висота може бути в кількох значеннях px i % */
+  font-size: 50px; /* розмір шрифту */ 
+  font-weight: 400;
+  opacity: 1; /* прозорість */
+  color: rgb(232, 235, 232); /* колір тексту*/
+  top: 100px; /* позиція зверху */
+  left: 35%; /* позиція зліва */
+  /*border: var(--li-mas-color) solid 1px; /* рамка ( колір, тип лінії , товщина лінії)*/
+}
+
+.lg_capt { /* About */
+  position: absolute; /* позиція відносно вікна */
+  width: auto; /* ширина може бути в кількох значеннях px i % */
+  height: auto; /* висота може бути в кількох значеннях px i % */
+  top: 10px; /* позиція зверху */
+  left: 10px; /* позиція зліва */
+  /*border: var(--li-mas-color) solid 1px; /* рамка ( колір, тип лінії , товщина лінії)*/
+}
+
+.ablogo { /* About */
+  width: 100%;
+}
+
+.ted { /* About */
+  color: rgb(246, 250, 0); /* колір тексту*/
+}
+
+.vlogo { /* About */
+  width: 44px;
+}
+
+.ab_text { /* About */
+  position: absolute; /* позиція відносно вікна */
+  width: auto; /* ширина може бути в кількох значеннях px i % */
+  height: auto; /* висота може бути в кількох значеннях px i % */
+  font-family: 'Courier New', Courier, monospace; /* шрифт */
+  font-size: 24px; /* розмір шрифту */ 
+  opacity: 1; /* прозорість */
+  color: var(--text-color); /* колір тексту*/
+  top: 180px; /* позиція зверху */
+  left: 100px; /* позиція зліва */
+  /*border: var(--li-mas-color) solid 1px; /* рамка ( колір, тип лінії , товщина лінії)*/
+}
+
+.abbody {
+  top: 64px;
+  height: calc(100% - 64px);
+  left: 0;
+  width: 100%;
+  position: fixed; /* Stay in place */
+  overflow: auto;
+  color: #f1f1f1;
+  background-color: rgba(20,20,20,0.6);
+  z-index: 0;
+}
+
+.foto1 {
+  left: 10px;
+  top: 10px;
+  position:absolute;
+}
+
+.foto2 {
+  left: 10px;
+  bottom: 10px;
+  position:absolute;
+}
+.foto3 {
+  right: 10px;
+  top: 10px;
+  position:absolute;
+}
+.foto4 {
+  right: 10px;
+  bottom: 10px;
+  position:absolute;
+}
+
+.greybox {
+  position:absolute;
+  left: 35%;
+  top: 15%;
+  width: 400px;
+  height: 60%;
+  background-color: rgba(245, 245, 245, 0.6);
+}
+
+.Holaaa {
+  top: 200px;
+  height: 80%;
+  left: 25%;
+  width: 60%;
+  position: absolute; /* Stay in place */
+  overflow: auto;
+  color: #f1f1f1;
+  z-index: 1;
+}
+
+.l1 {
+  border: 3px solid black;
+  position: relative;
+  top: 20%;
+}
+
+.l2{
+  border: 3px solid black;
+  position: relative;
+  top: 20%;
+}
+
+.tiktok {
+  position: relative;
+  display: inline;
+  font-size: 26px;
+  color: #191919;
+  padding: 5px;
+}
+
+.condiv {
+  position: relative;
+  top: 25%;
+}
+
+.ablogo {
+  width: 60%;
+}
+.f30 {
+  font-size: 30px;
+}
+
+.abimg {
+  width: 100%;
+}
+
+.pbody {
+  top: 64px;
+  height: calc(100% - 64px);
+  left: 0;
+  width: auto;
+  position: absolute; /* Stay in place */
+  overflow: auto;
+  padding: 15px;
+  color: #f1f1f1;
+  background-color: rgba(20,20,20,0.6);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 18%;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: rgba(8,120,57,0.5);
+  /*filter: grayscale(100%);*/
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+
+.responsive:hover {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+  z-index: 99;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+    margin: 6px 0;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {transform: scale(0.1)} 
+  to {transform: scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+
+/* Правило Для інших типів екранів */
+@media screen and (max-width: 640px) { /* це правило починає діяти коли ширина браузера буде меною за 640 пікселів*/
+  
+  /* Modal Content/Box */
+
+  .logotxt {
+    font-family: 'Courier New', Courier, monospace; /* шрифт */
+    font-size: 15px; /* розмір шрифту */ 
+    color: #a19ecc; /* колір тексту*/
+  } 
+
+}
